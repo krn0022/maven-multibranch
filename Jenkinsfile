@@ -31,4 +31,11 @@ pipeline {
             }
         }
     }
+
+    post {
+        success {
+            echo 'Build successful'
+            archiveArtifacts artifacts: 'target/*.jar'
+        }
+    }
 }
