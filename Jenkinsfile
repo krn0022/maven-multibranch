@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         maven 'Maven3'
-        jdk 'JDK17'
+        jdk 'JDK11'
     }
 
     stages {
@@ -34,7 +34,6 @@ pipeline {
 
     post {
         success {
-            echo 'Build successful'
             archiveArtifacts artifacts: 'target/*.jar'
         }
     }
